@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>神思庭 (Shensist-AIS) | 官方使用指南</title>
+    <title>神思庭 (Shensist-AIS) | 2026 跨时空控制矩阵</title>
     <style>
         :root { --shensist-green: #07c160; --bg-black: #0a0a0a; --card-bg: #161616; }
         body { background: var(--bg-black); color: #ddd; font-family: "PingFang SC", sans-serif; line-height: 1.6; margin: 0; padding: 0; }
@@ -14,10 +14,11 @@
         h2 { color: var(--shensist-green); border-left: 4px solid var(--shensist-green); padding-left: 15px; margin-top: 40px; }
         .step-card { background: var(--card-bg); border-radius: 15px; padding: 25px; margin: 20px 0; border: 1px solid #222; }
         .btn-group { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 30px; }
-        .btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; }
         .btn-primary { background: var(--shensist-green); color: #fff; }
         .btn-secondary { background: #333; color: #ccc; }
-        code { background: #000; color: #07c160; padding: 2px 6px; border-radius: 4px; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
+        .skill-item { background: #000; padding: 10px; border-radius: 6px; border: 1px solid #333; font-size: 0.9em; text-align: center; color: #07c160; }
         footer { text-align: center; padding: 60px 0; color: #444; font-size: 0.8em; border-top: 1px solid #222; }
     </style>
 </head>
@@ -27,31 +28,44 @@
     <header>
         <img src="logo_ts.webp" class="logo" alt="AIS">
         <h1>神思庭 (Shensist-AIS)</h1>
-        <p style="color:#666">赋予智能体场景灵魂 · 2026 跨时空控制矩阵</p>
+        <p style="color:#666">赋予智能体场景灵魂 · 艺术智能工作室 (AIS)</p>
     </header>
 
     <section>
-        <h2>第一步：获取执行大脑 (macOS)</h2>
+        <h2>第一步：获取执行大脑 (跨平台)</h2>
         <div class="step-card">
-            <strong>下载并运行神思庭控制终端。</strong>
-            <p>本程序是执行端，负责在你的 Mac 电脑上接收指令并操作软件（如 <strong>Cubase</strong>, Pro Tools, Kdenlive）。</p>
+            <strong>本程序是执行端，负责接管并操作你的完整操作系统及其所有专业软件。</strong>
+            <p>通过模拟物理级键鼠指令，实现对系统的深度统领，完美支持 Cubase, Pro Tools 等所有 DAW 轨道操作及办公生产力工具。</p>
             <div class="btn-group">
-                <a href="https://github.com/jinv2/Shensist-AirEye-Terminal/releases/latest/download/Shensist_AirEye_Mac" class="btn btn-primary">🏛️ 下载 macOS 官方版 (v2.6.1)</a>
+                <a href="https://github.com/jinv2/Shensist-AirEye-Terminal/releases/latest/download/Shensist_AirEye_Mac" class="btn btn-primary">🏛️ 下载 macOS 版 (v2.6.1)</a>
+                <a href="https://github.com/jinv2/Shensist-AirEye-Terminal/releases/latest/download/Shensist_AirEye_Win.exe" class="btn btn-secondary">🪟 Windows 一键安装包</a>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>第二步：指挥方式选择</h2>
+        <h2>第二步：Cubase 灵魂快捷键指令 (语音/远程)</h2>
         <div class="step-card">
-            <strong>A. 近场指挥 (零延迟)</strong>
-            <p>在 Mac 本地浏览器输入：<code>http://localhost:5000</code></p>
+            <p>神思庭已内置专业编曲映射，对着 iPhone 喊出指令或在远程面板点击：</p>
+            <div class="skills-grid">
+                <div class="skill-item">开始录音 [*]</div>
+                <div class="skill-item">停止播放 [Space]</div>
+                <div class="skill-item">量化选中 [Q]</div>
+                <div class="skill-item">打开混音台 [F3]</div>
+                <div class="skill-item">撤销操作 [Ctrl+Z]</div>
+                <div class="skill-item">保存工程 [Ctrl+S]</div>
+                <div class="skill-item">导出音频 [Ctrl+L]</div>
+                <div class="skill-item">节拍器开关 [C]</div>
+            </div>
         </div>
+    </section>
+
+    <section>
+        <h2>第三步：指挥中心</h2>
         <div class="step-card">
-            <strong>B. 跨空指挥 (iPhone 微信)</strong>
-            <p>当你不在电脑旁，或想用手机语音控制时：</p>
+            <p><strong>近场指挥：</strong> 浏览器访问 <code>http://localhost:5000</code></p>
             <div class="btn-group">
-                <a href="https://huggingface.co/spaces/jinv2/Shensist-AIS-Terminal" class="btn btn-secondary">🌐 进入 iPhone 远程面板</a>
+                <a href="https://huggingface.co/spaces/jinv2/Shensist-AIS-Terminal" class="btn btn-primary">🌐 进入 iPhone 微信远程面板</a>
             </div>
         </div>
     </section>
