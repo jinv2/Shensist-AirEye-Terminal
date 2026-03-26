@@ -1,5 +1,0 @@
-vosk
-pyaudio
-pyautogui
-opencv-python
-numpy
