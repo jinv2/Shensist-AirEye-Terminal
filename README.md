@@ -1,11 +1,24 @@
-# 🏛️ 神思庭 (Shensist-AIS) 控制终端 v2.5 Official
+---
+title: Shensist-AirEye
+emoji: 🏛️
+colorFrom: green
+colorTo: gray
+sdk: docker
+app_port: 7860
+pinned: false
+---
 
-## 1. 核心架构：全模态接入 (Full-Modal Control)
-* 微信语音/网页控制：通过 iPhone 13 微信键盘的高精度识别。
-* 物理 MIDI 触发：将编曲键盘转化为 100+ 专业 Skills 触发器。
-* 内核级按键模拟：实现毫秒级响应。
+# 🏛️ 神思AirEye · 第 14 颗行星 v2.6.5
 
-## 2. 快速入门
-1. 启动服务：./dist/Shensist_Terminal_Pro
-2. 访问控制台：http://192.168.1.9:5000
-3. 版权声明：© 2026 Shensist (AIS). shensist.top
+## 1. 核心定义：跨维智控矩阵
+**神思庭 (Shensist-AIS)** | 赋予智能体场景灵魂 · 2026 跨时空控制矩阵。
+
+* **空驭交互 (AUI)**：iPhone 13 微信键盘/网页端毫秒级控制。
+* **物理阵地 (H410M)**：本地 Ubuntu 25 核心。
+
+---
+
+## 2. ⚡ 跨平台产线 (v2.6.5)
+* [📦 Windows 版 (.exe)](https://github.com/jinv2/Shensist-AirEye-Terminal/raw/main/dist/windows/Shensist_Terminal_Pro.exe)
+* [📦 macOS 版 (.dmg)](https://github.com/jinv2/Shensist-AirEye-Terminal/raw/main/dist/macos/Shensist_Terminal_Mac.dmg)
+* [📦 Linux 版 (.tar.gz)](https://github.com/jinv2/Shensist-AirEye-Terminal/raw/main/dist/linux/Shensist_Terminal_Core.tar.gz)
