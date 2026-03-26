@@ -1,0 +1,75 @@
+name: 🏛️ Shensist-AIS 云端封装工厂
+
+on:
+  push:
+    tags:
+      - 'v*' # 当你推送到新标签（如 v2.6.2）时自动触发
+
+jobs:
+  createrelease:
+    name: Create Release
+    runs-on: ubuntu-latest
+    outputs:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+    steps:
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: 🏛️ 神思庭 (Shensist-AIS) 控制终端 ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+
+  build_matrix:
+    name: Build Shensist-Matrix
+    needs: createrelease
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest] # 物理双端同步锻造
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: 注入代码灵魂
+        uses: actions/checkout@v4
+
+      - name: 注入 Python 核心
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 注入物理驱动依赖
+        run: pip install pyinstaller flask flask-cors pyautogui
+
+      - name: 🏛️ Shensist-AIS 物理级封装 (Onefile)
+        run: |
+          pyinstaller --onefile --noconsole --name=Shensist_AirEye_Win Shensist_Web_Master.py
+        if: runner.os == 'Windows'
+
+      - name: 🍎 Shensist-AIS 物理级封装 (macOS)
+        run: |
+          pyinstaller --onefile --noconsole --name=Shensist_AirEye_Mac Shensist_Web_Master.py
+        if: runner.os == 'macOS'
+
+      - name: �� 全球分发挂载
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.createrelease.outputs.upload_url }}
+          asset_path: ./dist/Shensist_AirEye_Win.exe
+          asset_name: Shensist_AirEye_Win.exe
+          asset_content_type: application/octet-stream
+        if: runner.os == 'Windows'
+
+      - name: 🍏 全球分发挂载 (macOS)
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.createrelease.outputs.upload_url }}
+          asset_path: ./dist/Shensist_AirEye_Mac
+          asset_name: Shensist_AirEye_Mac
+          asset_content_type: application/octet-stream
+        if: runner.os == 'macOS'
