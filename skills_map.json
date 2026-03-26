@@ -1,0 +1,10 @@
+{
+    "播放": ["KEY_SPACE"],
+    "录音": ["KEY_LEFTCTRL", "KEY_SPACE"],
+    "切断": ["KEY_LEFTCTRL", "KEY_E"],
+    "剃刀": ["KEY_X"],
+    "混音切换": ["KEY_LEFTCTRL", "KEY_EQUAL"],
+    "新建轨道": ["KEY_LEFTCTRL", "KEY_LEFTSHIFT", "KEY_N"],
+    "标记": ["KEY_ENTER"],
+    "撤销": ["KEY_LEFTCTRL", "KEY_Z"]
+}

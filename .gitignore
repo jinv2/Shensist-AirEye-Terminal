@@ -1,0 +1,6 @@
+dist/
+build/
+*.spec
+*.exe
+*.bin
+.shensist_history
