@@ -2,7 +2,7 @@ name: 🏛️ 神思AirEye 全平台封装工厂
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ] # 兼容双分支触发
 
 permissions:
   contents: write
@@ -24,36 +24,26 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
-
     - name: Install dependencies
       run: |
         pip install pyinstaller flask flask-cors pyautogui
         if [ "${{ matrix.os }}" = "ubuntu-latest" ]; then
           sudo apt-get update
-          sudo apt-get install -y python3-tk python3-dev libx11-dev libxtst-dev
+          sudo apt-get install -y python3-tk python3-dev
         fi
       shell: bash
-
     - name: Build Executable
-      run: |
-        pyinstaller --onefile --noconsole --name=${{ matrix.artifact_name }} Shensist_Web_Master.py
+      run: pyinstaller --onefile --noconsole --name=${{ matrix.artifact_name }} Shensist_Web_Master.py
       shell: bash
-
-    - name: Create Release and Upload Assets
+    - name: Release
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: v2.6.4
-        name: 🏛️ 神思AirEye v2.6.4 (全平台合拢版)
-        body: |
-            赋予智能体场景灵魂 · 2026 跨时空控制矩阵
-            - Windows 版: 适配 H410M 系列
-            - macOS 版: 适配执行大脑
-            - Linux 版: 适配 Ubuntu 25 物理环境
+        tag_name: v2.6.5
+        name: 🏛️ 神思AirEye v2.6.5 (全平台合拢版)
         files: dist/${{ matrix.artifact_name }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

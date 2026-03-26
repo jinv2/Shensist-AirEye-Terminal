@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>神思庭 (Shensist-AIS) | 2026 跨时空控制矩阵</title>
+    <title>神思AirEye | 2026 跨时空控制矩阵</title>
     <style>
-        :root { --shensist-green: #07c160; --bg-black: #0a0a0a; --card-bg: #161616; }
-        body { background: var(--bg-black); color: #ddd; font-family: "PingFang SC", sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        :root { --shensist-green: #07c160; --bg-black: #0a0a0a; --card-bg: #161616; --linux-orange: #e67e22; }
+        body { background: var(--bg-black); color: #ddd; font-family: "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.6; margin: 0; padding: 0; }
         .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
         header { text-align: center; padding: 60px 0; }
         .logo { width: 80px; height: 80px; border-radius: 20px; box-shadow: 0 0 20px rgba(7,193,96,0.3); margin-bottom: 20px; }
-        h1 { color: var(--shensist-green); font-weight: 300; letter-spacing: 4px; }
+        h1 { color: var(--shensist-green); font-weight: 300; letter-spacing: 4px; margin-bottom: 10px; }
+        .studio-tag { color: #666; font-size: 0.9em; margin-top: 5px; }
         h2 { color: var(--shensist-green); border-left: 4px solid var(--shensist-green); padding-left: 15px; margin-top: 40px; }
         .step-card { background: var(--card-bg); border-radius: 15px; padding: 25px; margin: 20px 0; border: 1px solid #222; }
         .btn-group { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 30px; }
-        .btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; }
+        .btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; text-align: center; min-width: 160px; }
         .btn-primary { background: var(--shensist-green); color: #fff; }
         .btn-secondary { background: #333; color: #ccc; }
+        .btn-linux { background: var(--linux-orange); color: #fff; }
+        .btn:hover { opacity: 0.8; transform: translateY(-2px); }
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
         .skill-item { background: #000; padding: 10px; border-radius: 6px; border: 1px solid #333; font-size: 0.9em; text-align: center; color: #07c160; }
         footer { text-align: center; padding: 60px 0; color: #444; font-size: 0.8em; border-top: 1px solid #222; }
+        code { background: #000; color: #07c160; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
     </style>
 </head>
 <body>
@@ -27,35 +31,34 @@
 <div class="container">
     <header>
         <img src="logo_ts.webp" class="logo" alt="AIS">
-        <h1>神思庭 (Shensist-AIS)</h1>
-        <p style="color:#666">赋予智能体场景灵魂 · 艺术智能工作室 (AIS)</p>
+        <h1>神思AirEye</h1>
+        <p class="studio-tag">赋予智能体场景灵魂 · <strong>神思庭艺术智能工作室 (AIS)</strong> 荣誉出品</p>
     </header>
 
     <section>
-        <h2>第一步：获取执行大脑 (跨平台)</h2>
+        <h2>第一步：获取执行大脑 (全平台覆盖)</h2>
         <div class="step-card">
-            <strong>本程序是执行端，负责接管并操作你的完整操作系统及其所有专业软件。</strong>
-            <p>通过模拟物理级键鼠指令，实现对系统的深度统领，完美支持 Cubase, Pro Tools 等所有 DAW 轨道操作及办公生产力工具。</p>
+            <strong>本程序是 神思AirEye 的物理执行端。</strong>
+            <p>它负责接管并操作您的完整操作系统。通过模拟物理级键鼠指令，深度统领 Cubase, Pro Tools 等所有专业 DAW 轨道及系统全局应用。</p>
             <div class="btn-group">
-                <a href="https://github.com/jinv2/Shensist-AirEye-Terminal/releases/latest/download/Shensist_AirEye_Mac" class="btn btn-primary">🏛️ 下载 macOS 版 (v2.6.1)</a>
-                <a href="https://github.com/jinv2/Shensist-AirEye-Terminal/releases/latest/download/Shensist_AirEye_Win.exe" class="btn btn-secondary">🪟 Windows 一键安装包</a>
+                <a href="https://github.com/jinv2/Shensist-AirEye-Terminal/releases/latest/download/Shensist_AirEye_Mac" class="btn btn-primary">🏛️ 下载 macOS 版</a>
+                <a href="https://github.com/jinv2/Shensist-AirEye-Terminal/releases/latest/download/Shensist_AirEye_Win.exe" class="btn btn-secondary">🪟 Windows 版</a>
+                <a href="https://github.com/jinv2/Shensist-AirEye-Terminal/releases/latest/download/Shensist_AirEye_Linux" class="btn btn-linux">🐧 Linux 原生版</a>
             </div>
         </div>
     </section>
 
     <section>
-        <h2>第二步：Cubase 灵魂快捷键指令 (语音/远程)</h2>
+        <h2>第二步：Cubase 核心指令集</h2>
         <div class="step-card">
-            <p>神思庭已内置专业编曲映射，对着 iPhone 喊出指令或在远程面板点击：</p>
+            <p>已内置专业编曲映射，支持语音或 iPhone 远程指挥：</p>
             <div class="skills-grid">
                 <div class="skill-item">开始录音 [*]</div>
-                <div class="skill-item">停止播放 [Space]</div>
                 <div class="skill-item">量化选中 [Q]</div>
-                <div class="skill-item">打开混音台 [F3]</div>
-                <div class="skill-item">撤销操作 [Ctrl+Z]</div>
+                <div class="skill-item">混音面板 [F3]</div>
+                <div class="skill-item">停止播放 [Space]</div>
+                <div class="skill-item">节拍器 [C]</div>
                 <div class="skill-item">保存工程 [Ctrl+S]</div>
-                <div class="skill-item">导出音频 [Ctrl+L]</div>
-                <div class="skill-item">节拍器开关 [C]</div>
             </div>
         </div>
     </section>
@@ -63,9 +66,10 @@
     <section>
         <h2>第三步：指挥中心</h2>
         <div class="step-card">
-            <p><strong>近场指挥：</strong> 浏览器访问 <code>http://localhost:5000</code></p>
+            <p><strong>A. 近场指挥：</strong> 浏览器访问 <code>http://localhost:5000</code></p>
+            <p><strong>B. 跨空指挥：</strong> 拿起 iPhone，点击下方按钮进入微信远程面板</p>
             <div class="btn-group">
-                <a href="https://huggingface.co/spaces/jinv2/Shensist-AIS-Terminal" class="btn btn-primary">🌐 进入 iPhone 微信远程面板</a>
+                <a href="https://huggingface.co/spaces/jinv2/Shensist-AIS-Terminal" class="btn btn-primary" style="width: 100%;">🌐 进入 iPhone 远程面板</a>
             </div>
         </div>
     </section>
