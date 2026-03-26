@@ -1,4 +1,4 @@
-name: 🏛️ Shensist-AIS 云端封装工厂
+name: 🏛️ 神思AirEye 全平台封装工厂
 
 on:
   push:
@@ -9,27 +9,51 @@ permissions:
 
 jobs:
   build:
-    runs-on: windows-latest
+    name: Build for ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+        include:
+          - os: windows-latest
+            artifact_name: Shensist_AirEye_Win.exe
+          - os: macos-latest
+            artifact_name: Shensist_AirEye_Mac
+          - os: ubuntu-latest
+            artifact_name: Shensist_AirEye_Linux
+
     steps:
     - uses: actions/checkout@v3
+    
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
+
     - name: Install dependencies
       run: |
         pip install pyinstaller flask flask-cors pyautogui
-    - name: Build Windows EXE
+        if [ "${{ matrix.os }}" = "ubuntu-latest" ]; then
+          sudo apt-get update
+          sudo apt-get install -y python3-tk python3-dev libx11-dev libxtst-dev
+        fi
+      shell: bash
+
+    - name: Build Executable
       run: |
-        pyinstaller --onefile --noconsole --name=Shensist_AirEye_Win Shensist_Web_Master.py
-    - name: Create Release
-      id: create_release
+        pyinstaller --onefile --noconsole --name=${{ matrix.artifact_name }} Shensist_Web_Master.py
+      shell: bash
+
+    - name: Create Release and Upload Assets
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: v2.6.3
-        name: 🏛️ 神思庭 (Shensist-AIS) 控制终端 v2.6.3
-        draft: false
-        prerelease: false
-        files: dist/Shensist_AirEye_Win.exe
+        tag_name: v2.6.4
+        name: 🏛️ 神思AirEye v2.6.4 (全平台合拢版)
+        body: |
+            赋予智能体场景灵魂 · 2026 跨时空控制矩阵
+            - Windows 版: 适配 H410M 系列
+            - macOS 版: 适配执行大脑
+            - Linux 版: 适配 Ubuntu 25 物理环境
+        files: dist/${{ matrix.artifact_name }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
