@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神思AirEye (Shensist-AIS) | 官方使用指南</title>
+    <style>
+        :root { --shensist-green: #07c160; --bg-black: #0a0a0a; --card-bg: #161616; --sky-cyan: #00FFFF; }
+        body { background: var(--bg-black); color: #ddd; font-family: "PingFang SC", sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; padding: 60px 0; }
+        .logo { width: 80px; height: 80px; border-radius: 20px; box-shadow: 0 0 20px rgba(7,193,96,0.3); margin-bottom: 20px; }
+        h1 { color: var(--shensist-green); font-weight: 300; letter-spacing: 4px; }
+        h2 { color: var(--shensist-green); border-left: 4px solid var(--shensist-green); padding-left: 15px; margin-top: 40px; }
+        .step-card { background: var(--card-bg); border-radius: 15px; padding: 25px; margin: 20px 0; border: 1px solid #222; }
+        .btn-group { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; font-size: 0.9em; }
+        .btn-primary { background: var(--shensist-green); color: #fff; }
+        .btn-primary:hover { box-shadow: 0 0 15px var(--shensist-green); opacity: 0.9; }
+        .btn-secondary { background: #333; color: #ccc; }
+        code { background: #000; color: #07c160; padding: 2px 6px; border-radius: 4px; }
+        footer { text-align: center; padding: 60px 0; color: #444; font-size: 0.8em; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="logo_ts.webp" class="logo" alt="AIS">
+        <h1>神思AirEye</h1>
+        <p style="color:#666">赋予智能体场景灵魂 · 2026 跨时空控制矩阵</p>
+    </header>
+
+    <section>
+        <h2>第一步：获取执行大脑 (v2.6.5 Final)</h2>
+        <div class="step-card">
+            <strong>下载并运行神思AirEye控制终端。</strong>
+            <p>本程序负责在你的电脑上接收指令并操作软件（如 <strong>Cubase</strong>, Pro Tools, Kdenlive）。</p>
+            <div class="btn-group">
+                <a href="https://github.com/jinv2/Shensist-AirEye-Terminal/raw/main/dist/windows/Shensist_Terminal_Pro.exe" class="btn btn-primary">🏛️ 下载 Windows 版 (.exe)</a>
+                <a href="https://github.com/jinv2/Shensist-AirEye-Terminal/raw/main/dist/macos/Shensist_Terminal_Mac.dmg" class="btn btn-primary">🏛️ 下载 macOS 版 (.dmg)</a>
+                <a href="https://github.com/jinv2/Shensist-AirEye-Terminal/raw/main/dist/linux/Shensist_Terminal_Core.tar.gz" class="btn btn-primary">🏛️ 下载 Linux 版 (.tar.gz)</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>第二步：指挥方式选择</h2>
+        <div class="step-card">
+            <strong>A. 近场指挥 (零延迟)</strong>
+            <p>在本地浏览器输入：<code>http://localhost:7860</code></p>
+        </div>
+        <div class="step-card">
+            <strong>B. 跨空指挥 (iPhone 13 / 微信)</strong>
+            <p>通过云端行星中继，实现全球指令投射：</p>
+            <div class="btn-group">
+                <a href="https://huggingface.co/spaces/jinv2/Shensist-Planet14" class="btn btn-secondary">🌐 进入 14 号行星远程面板</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Shensist Art Intelligence Studio (AIS). <br>
+        赋予智能体场景灵魂：<a href="https://shensist.top" style="color:#07c160">shensist.top</a></p>
+    </footer>
+</div>
+
+</body>
+</html>
